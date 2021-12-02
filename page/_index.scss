@@ -121,6 +121,8 @@ p{
                 .boutonmenuprincipal:hover {
                     background-color: #3282F7;
                     border-radius: 5px 5px 0px 0px;
+                    display: flex;
+                    flex-wrap: wrap;
                 }
 
                 .appareil{
@@ -147,7 +149,7 @@ p{
                 background-color: #3282F7;
                 min-width: 175px;
                 max-width: 184px;
-                width: 100%;
+                width: 300px;
 
                 a{
                     color: white;

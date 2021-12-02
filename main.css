@@ -166,6 +166,11 @@ p {
 #block-page .btn-group .dropdown form .boutonmenuprincipal:hover {
   background-color: #3282F7;
   border-radius: 5px 5px 0px 0px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
 #block-page .btn-group .dropdown form .appareil {
@@ -191,7 +196,7 @@ p {
   background-color: #3282F7;
   min-width: 175px;
   max-width: 184px;
-  width: 100%;
+  width: 300px;
 }
 
 #block-page .btn-group .dropdown .dropdown-child a {
