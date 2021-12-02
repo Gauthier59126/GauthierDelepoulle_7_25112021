@@ -1,0 +1,490 @@
+@font-face {
+  font-family: 'lato';
+  src: url("fonts/Lato-Regular.ttf");
+}
+
+body, .page {
+  max-width: 1500px;
+  margin: auto;
+}
+
+h2 {
+  font-size: 18px;
+}
+
+h3 {
+  font-size: 12px;
+}
+
+p {
+  font-size: 12px;
+}
+
+#block-page {
+  width: 90%;
+  margin: auto;
+}
+
+#block-page header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 150px;
+}
+
+#block-page header .div-logo .logo {
+  width: 320px;
+  margin-top: 40px;
+}
+
+#block-page .form-principal {
+  margin-top: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background-color: #E7E7E7;
+}
+
+#block-page .form-principal input {
+  width: 95%;
+  height: 70px;
+  border-radius: 5px;
+  background-color: #E7E7E7;
+  border: none;
+  padding-left: 20px;
+  font-size: 18px;
+  font-family: 'lato';
+}
+
+#block-page .form-principal input:focus {
+  outline: none;
+}
+
+#block-page .form-principal input::-webkit-input-placeholder {
+  color: #a7a7a7;
+}
+
+#block-page .form-principal input:-ms-input-placeholder {
+  color: #a7a7a7;
+}
+
+#block-page .form-principal input::-ms-input-placeholder {
+  color: #a7a7a7;
+}
+
+#block-page .form-principal input::placeholder {
+  color: #a7a7a7;
+}
+
+#block-page .form-principal button {
+  width: 5%;
+  border: none;
+  background-color: #E7E7E7;
+  cursor: pointer;
+}
+
+#block-page .form-principal button i {
+  font-size: 24px;
+}
+
+#block-page .btn-group {
+  width: 100%;
+  height: 70px;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#block-page .btn-group .block-ingredients, #block-page .btn-group .block-appareil, #block-page .btn-group .block-ustensiles {
+  width: 14%;
+  height: 100%;
+  margin-right: 30px;
+}
+
+#block-page .btn-group .dropdown {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  min-width: 175px;
+  max-width: 184px;
+  max-height: 300px;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+#block-page .btn-group .dropdown form .boutonmenuprincipal {
+  width: 78%;
+  height: 30px;
+  background-color: #3282F7;
+  color: white;
+  border: none;
+  cursor: pointer;
+  padding: 20px;
+  font-size: 18px;
+  border-radius: 5px;
+}
+
+#block-page .btn-group .dropdown form input::-webkit-input-placeholder {
+  color: white;
+  font-family: 'lato';
+  font-size: 18px;
+}
+
+#block-page .btn-group .dropdown form input:-ms-input-placeholder {
+  color: white;
+  font-family: 'lato';
+  font-size: 18px;
+}
+
+#block-page .btn-group .dropdown form input::-ms-input-placeholder {
+  color: white;
+  font-family: 'lato';
+  font-size: 18px;
+}
+
+#block-page .btn-group .dropdown form input::placeholder {
+  color: white;
+  font-family: 'lato';
+  font-size: 18px;
+}
+
+#block-page .btn-group .dropdown form input:focus {
+  outline: none;
+}
+
+#block-page .btn-group .dropdown form .boutonmenuprincipal:hover {
+  background-color: #3282F7;
+  border-radius: 5px 5px 0px 0px;
+}
+
+#block-page .btn-group .dropdown form .appareil {
+  background-color: #68D9A4;
+}
+
+#block-page .btn-group .dropdown form .appareil:hover {
+  background-color: #68D9A4;
+  border-radius: 5px 5px 0px 0px;
+}
+
+#block-page .btn-group .dropdown form .ustensiles {
+  background-color: #ED6454;
+}
+
+#block-page .btn-group .dropdown form .ustensiles:hover {
+  background-color: #ED6454;
+  border-radius: 5px 5px 0px 0px;
+}
+
+#block-page .btn-group .dropdown .dropdown-child {
+  display: none;
+  background-color: #3282F7;
+  min-width: 175px;
+  max-width: 184px;
+  width: 100%;
+}
+
+#block-page .btn-group .dropdown .dropdown-child a {
+  color: white;
+  padding: 20px;
+  text-decoration: none;
+  display: block;
+  font-family: 'lato';
+  line-height: 0px;
+}
+
+#block-page .btn-group .dropdown .dropdown-child-appareil {
+  background-color: #68D9A4;
+}
+
+#block-page .btn-group .dropdown .dropdown-child-ustensiles {
+  background-color: #ED6454;
+}
+
+#block-page .btn-group .dropdown:hover .dropdown-child {
+  display: block;
+}
+
+#block-page .conteneur-recettes {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  font-family: 'lato';
+}
+
+#block-page .conteneur-recettes .recette {
+  width: 31%;
+  height: 400px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  min-width: 375px;
+}
+
+#block-page .conteneur-recettes .recette .div-img {
+  height: 180px;
+  background-color: #C7BEBE;
+  border-radius: 5px 5px 0px 0px;
+}
+
+#block-page .conteneur-recettes .recette .description-recette {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  background-color: #E7E7E7;
+  padding-bottom: 30px;
+  border-radius: 0px 0px 5px 5px;
+}
+
+#block-page .conteneur-recettes .recette .description-recette .nom {
+  padding-left: 15px;
+}
+
+#block-page .conteneur-recettes .recette .description-recette .temps {
+  width: 30%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-right: 15px;
+}
+
+#block-page .conteneur-recettes .recette .description-recette .temps i {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+#block-page .conteneur-recettes .recette .description-recette .ingredients {
+  width: 42%;
+  line-height: 5px;
+  padding-top: 10px;
+  padding-left: 15px;
+}
+
+#block-page .conteneur-recettes .recette .description-recette .preparation {
+  width: 50%;
+  padding-right: 15px;
+}
+
+@media all and (max-width: 375px) {
+  .page {
+    width: 375px;
+    margin: auto;
+  }
+  .page #block-page {
+    width: 90%;
+    margin: auto;
+  }
+  .page #block-page header {
+    width: 100%;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .page #block-page header .div-logo .logo {
+    width: 280px;
+    margin-top: 15px;
+  }
+  .page #block-page .form-principal {
+    height: 60px;
+    margin-top: 10px;
+  }
+  .page #block-page .form-principal input {
+    width: 81%;
+    height: 60px;
+    padding-left: 15px;
+    border-radius: 0px;
+  }
+  .page #block-page .form-principal input::-webkit-input-placeholder {
+    font-size: 16px;
+  }
+  .page #block-page .form-principal input:-ms-input-placeholder {
+    font-size: 16px;
+  }
+  .page #block-page .form-principal input::-ms-input-placeholder {
+    font-size: 16px;
+  }
+  .page #block-page .form-principal input::placeholder {
+    font-size: 16px;
+  }
+  .page #block-page .form-principal button {
+    width: 19%;
+    height: 62px;
+  }
+  .page #block-page .form-principal button i {
+    font-size: 20px;
+  }
+  .page #block-page .btn-group {
+    width: 100%;
+    height: 130px;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    margin-top: 20px;
+    margin-bottom: 15px;
+  }
+  .page #block-page .btn-group .block-ingredients, .page #block-page .btn-group .block-appareil, .page #block-page .btn-group .block-ustensiles {
+    width: 160px;
+    height: 60px;
+    margin-right: 15px;
+  }
+  .page #block-page .btn-group .block-appareil {
+    margin-right: 0px;
+  }
+  .page #block-page .btn-group .dropdown {
+    position: relative;
+    min-width: 0px;
+    width: 100%;
+  }
+  .page #block-page .btn-group .dropdown form .boutonmenuprincipal {
+    width: 75%;
+    height: 15px;
+  }
+  .page #block-page .btn-group .dropdown form input::-webkit-input-placeholder {
+    font-size: 16px;
+  }
+  .page #block-page .btn-group .dropdown form input:-ms-input-placeholder {
+    font-size: 16px;
+  }
+  .page #block-page .btn-group .dropdown form input::-ms-input-placeholder {
+    font-size: 16px;
+  }
+  .page #block-page .btn-group .dropdown form input::placeholder {
+    font-size: 16px;
+  }
+  .page #block-page .btn-group .dropdown .dropdown-child {
+    min-width: 0px;
+    width: 100%;
+  }
+  .page #block-page .conteneur-recettes {
+    width: 100%;
+    margin: auto;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .page #block-page .conteneur-recettes .recette {
+    width: 100%;
+    height: 350px;
+    min-width: 0px;
+    margin-bottom: 20px;
+  }
+  .page #block-page .conteneur-recettes .recette .description-recette {
+    padding-bottom: 20px;
+  }
+  .page #block-page .conteneur-recettes .recette .description-recette .preparation {
+    width: 45%;
+  }
+}
+
+@media all and (min-width: 376px) and (max-width: 768px) {
+  .page {
+    width: 768px;
+  }
+  .page #block-page .btn-group {
+    width: 70%;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .page #block-page .conteneur-recettes .recette {
+    width: 49%;
+    height: 400px;
+    min-width: 280px;
+  }
+  .page #block-page .conteneur-recettes .recette .description-recette .ingredients {
+    width: 47%;
+  }
+  .page #block-page .conteneur-recettes .recette .description-recette .preparation {
+    width: 44%;
+  }
+}
+
+@media all and (min-width: 769px) and (max-width: 969px) {
+  .page #block-page .btn-group {
+    width: 70%;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .page #block-page .conteneur-recettes .recette {
+    width: 49%;
+    height: 400px;
+    min-width: 280px;
+  }
+  .page #block-page .conteneur-recettes .recette .description-recette .ingredients {
+    width: 47%;
+  }
+  .page #block-page .conteneur-recettes .recette .description-recette .preparation {
+    width: 44%;
+  }
+}
+
+@media all and (min-width: 970px) and (max-width: 1149px) {
+  .page #block-page .btn-group {
+    width: 55%;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .page #block-page .conteneur-recettes .recette {
+    width: 31%;
+    height: 500px;
+    min-width: 280px;
+  }
+  .page #block-page .conteneur-recettes .recette .description-recette .ingredients {
+    width: 50%;
+  }
+  .page #block-page .conteneur-recettes .recette .description-recette .preparation {
+    width: 38%;
+  }
+}
+
+@media all and (min-width: 1150px) and (max-width: 1270px) {
+  #block-page .btn-group {
+    width: 45%;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  #block-page .conteneur-recettes .recette {
+    width: 31%;
+    height: 500px;
+    min-width: 280px;
+  }
+  #block-page .conteneur-recettes .recette .description-recette .ingredients {
+    width: 45%;
+  }
+  #block-page .conteneur-recettes .recette .description-recette .preparation {
+    width: 40%;
+  }
+}
+/*# sourceMappingURL=main.css.map */

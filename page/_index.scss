@@ -1,0 +1,235 @@
+body, .page{
+    max-width: 1500px;
+    margin: auto;
+}
+
+h2{
+    font-size:18px
+}
+
+h3{
+    font-size:12px
+}
+
+p{
+    font-size: 12px;
+}
+
+#block-page{
+    width: 90%;
+    margin: auto;
+
+    header{
+        display: flex;
+        justify-content: center;
+        height: 150px;
+        
+        .div-logo{
+
+            .logo{
+                width: 320px;
+                margin-top: 40px;
+            }
+        }
+    }
+
+    .form-principal{
+        margin-top: 20px;
+        display: flex;
+        background-color: $gris-clair;
+
+
+        input{
+            width: 95%;
+            height: 70px;
+            border-radius: 5px;
+            background-color: $gris-clair;
+            border: none;
+            padding-left: 20px;
+            font-size: 18px;
+            font-family: 'lato';
+        }
+
+        input:focus{
+            outline: none;
+        }
+
+        input::placeholder{
+            color: rgb(167, 167, 167);
+        }
+
+        button {
+            width: 5%;
+            border: none;
+            background-color: $gris-clair;
+            cursor: pointer;
+
+            i{
+                font-size: 24px;
+            }
+        }
+    }
+
+    .btn-group{
+        width: 100%;
+        height: 70px;
+        margin-top: 30px;
+        margin-bottom: 30px;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+
+        .block-ingredients, .block-appareil, .block-ustensiles{
+            width: 14%;
+            height: 100%;
+            margin-right: 30px;
+        }
+
+        .dropdown{
+            position: relative;
+            display: inline-block;
+            width: 100%;
+            min-width: 175px;
+            max-width: 184px;
+            max-height: 300px;
+            flex-wrap: wrap;
+
+            form{
+                
+                .boutonmenuprincipal {
+                    width: 78%;
+                    height: 30px;
+                    background-color: #3282F7;
+                    color: white;
+                    border: none;
+                    cursor: pointer;
+                    padding:20px;
+                    font-size: 18px;
+                    border-radius: 5px;
+                }
+    
+                input::placeholder{
+                    color: white;
+                    font-family: 'lato';
+                    font-size: 18px;
+                }
+
+                input:focus{
+                    outline: none;
+                }
+    
+                .boutonmenuprincipal:hover {
+                    background-color: #3282F7;
+                    border-radius: 5px 5px 0px 0px;
+                }
+
+                .appareil{
+                    background-color: #68D9A4;
+                }
+
+                .appareil:hover{
+                    background-color: #68D9A4;
+                    border-radius: 5px 5px 0px 0px;
+                }
+
+                .ustensiles{
+                    background-color: $rouge;
+                }
+
+                .ustensiles:hover{
+                    background-color: $rouge;
+                    border-radius: 5px 5px 0px 0px;
+                }
+            }
+
+            .dropdown-child {
+                display: none;
+                background-color: #3282F7;
+                min-width: 175px;
+                max-width: 184px;
+                width: 100%;
+
+                a{
+                    color: white;
+                    padding: 20px;
+                    text-decoration: none;
+                    display: block;
+                    font-family: 'lato';
+                    line-height: 0px;
+                }
+            }
+
+            .dropdown-child-appareil{
+                background-color: #68D9A4;
+            }
+
+            .dropdown-child-ustensiles{
+                background-color: $rouge;
+            }
+        }
+
+        .dropdown:hover .dropdown-child {
+            display: block;
+        }
+    }
+
+    .conteneur-recettes{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        font-family: 'lato';
+
+        .recette{
+            width: 31%;
+            height: 400px;
+            display: flex;
+            flex-direction: column;
+            min-width: 375px;
+
+
+            .div-img{
+                height: 180px;
+                background-color: $gris;
+                border-radius: 5px 5px 0px 0px;
+            }
+
+            .description-recette{
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-between;
+                background-color: $gris-clair;
+                padding-bottom: 30px;
+                border-radius: 0px 0px 5px 5px;
+
+                .nom{
+                    padding-left: 15px;
+                }
+
+                .temps{
+                    width: 30%;
+                    display: flex;
+                    justify-content: space-around;
+                    align-items: center;
+                    padding-right: 15px;
+
+                    i{
+                        font-size: 18px;
+                        font-weight: bold;
+                    }
+                }
+
+                .ingredients{
+                    width: 42%;
+                    line-height: 5px;
+                    padding-top: 10px;
+                    padding-left: 15px;
+                }
+
+                .preparation{
+                    width: 50%;
+                    padding-right: 15px;
+                }
+            }
+        }
+    }
+}

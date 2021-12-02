@@ -1,0 +1,248 @@
+@media all and (max-width: 375px){
+
+    .page{
+        width: 375px;
+        margin: auto;
+
+        #block-page{
+            width: 90%;
+            margin: auto;
+        
+            header{
+                width: 100%;
+                align-items: center;
+                
+                .div-logo{
+        
+                    .logo{
+                        width: 280px;
+                        margin-top: 15px;
+                    }
+                }
+            }
+        
+            .form-principal{
+                height: 60px;
+                margin-top: 10px;
+        
+        
+                input{
+                    width: 81%;
+                    height: 60px;
+                    padding-left: 15px;
+                    border-radius: 0px;
+                }
+
+                input::placeholder{
+                    font-size: 16px;
+                }
+        
+                button {
+                    width: 19%;
+                    height: 62px;
+        
+                    i{
+                        font-size: 20px;
+                    }
+                }
+            }
+        
+            .btn-group{
+                width: 100%;
+                height: 130px;
+                flex-wrap: wrap;
+                margin-top: 20px;
+                margin-bottom: 15px;
+        
+                .block-ingredients, .block-appareil, .block-ustensiles{
+                    width: 160px;
+                    height: 60px;
+                    margin-right: 15px;
+
+                }
+
+                .block-appareil{
+                    margin-right: 0px;
+                }
+        
+                .dropdown{
+                    position: relative;
+                    min-width: 0px;
+                    width: 100%;
+        
+                    form{
+
+                        
+                        .boutonmenuprincipal {
+                            width: 75%;
+                            height: 15px;
+                        }
+            
+                        input::placeholder{
+                            font-size: 16px;
+                        }
+                    }
+        
+                    .dropdown-child {
+                        min-width: 0px;
+                        width: 100%;
+                    }
+                }
+            }
+        
+            .conteneur-recettes{
+                width: 100%;
+                margin: auto;
+                flex-direction: column;
+        
+                .recette{
+                    width: 100%;
+                    height: 350px;
+                    min-width: 0px;
+                    margin-bottom: 20px;       
+        
+                    .description-recette{
+                        padding-bottom: 20px;
+        
+                        .preparation{
+                            width: 45%;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media all and (min-width: 376px) and (max-width:768px){
+    .page{
+        width: 768px;
+
+        #block-page{
+
+            .btn-group{
+                width: 70%;
+                justify-content: space-between;
+            }
+
+            .conteneur-recettes{
+    
+                .recette{
+                    width: 49%;
+                    height: 400px;
+                    min-width: 280px;
+
+                    .description-recette{
+        
+                        .ingredients{
+                            width: 47%;
+                        }
+        
+                        .preparation{
+                            width: 44%;
+                        }
+                    }
+                }
+            } 
+        }
+    }
+}
+
+@media all and (min-width: 769px) and (max-width:969px){
+
+    .page{
+
+        #block-page{
+           
+            .btn-group{
+                width: 70%;
+                justify-content: space-between;
+            }
+
+            .conteneur-recettes{
+ 
+                .recette{
+                    width: 49%;
+                    height: 400px;
+                    min-width: 280px;
+
+                    .description-recette{
+        
+                        .ingredients{
+                            width: 47%;
+                        }
+        
+                        .preparation{
+                            width: 44%;
+                        }
+                    }
+                }
+            } 
+        }
+    }
+}
+
+@media all and (min-width: 970px) and (max-width:1149px){
+
+    .page{
+
+        #block-page{
+           
+            .btn-group{
+                width: 55%;
+                justify-content: space-between;
+            }
+
+            .conteneur-recettes{
+  
+                .recette{
+                    width: 31%;
+                    height: 500px;
+                    min-width: 280px;
+
+                    .description-recette{
+        
+                        .ingredients{
+                            width: 50%;
+                        }
+        
+                        .preparation{
+                            width: 38%;
+                        }
+                    }
+                }
+            } 
+        }
+    }
+}
+
+@media all and (min-width: 1150px) and (max-width:1270px){
+
+    #block-page{
+
+        .btn-group{
+            width: 45%;
+            justify-content: space-between;
+        }
+
+        .conteneur-recettes{
+  
+            .recette{
+                width: 31%;
+                height: 500px;
+                min-width: 280px;
+    
+                .description-recette{
+    
+                    .ingredients{
+                        width: 45%;
+                    }
+    
+                    .preparation{
+                        width: 40%;
+                    }
+                }
+            }
+        }
+    }
+}
