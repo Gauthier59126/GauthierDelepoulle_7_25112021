@@ -19,7 +19,8 @@ searchBar.addEventListener('input', (e) => {
 
 const searchByInput = (input) => {
     const normalizeInput = normalize(input);
-    filterRecipes = recipes.filter(recipe => searchByName(normalizeInput, recipe));
+    filterRecipes = recipes.filter(recipe => searchByName(normalizeInput, recipe) || searchByDescription(normalizeInput, recipe) 
+    || searchByIngredient(normalizeInput, recipe));
     displayRecipes(filterRecipes);
 }
 
@@ -27,6 +28,16 @@ const searchByName = (input, recipe) => {
     return normalize(recipe.name).includes(input); 
 }
 
+const searchByDescription = (input, recipe) => {
+    return normalize(recipe.description).includes(input);
+}
+
+const searchByIngredient = (input, recipe) =>{
+    const ingredientNames = recipe.ingredients.map(ingredient => ingredient.ingredient);
+    return ingredientNames.some(name => normalize(name).includes(input));
+}
+
+// pour les caractères spéciaux
 const normalize = (text) => {
     return text.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "");
 }
