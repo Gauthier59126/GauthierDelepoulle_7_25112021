@@ -1,5 +1,6 @@
 import { recipes } from "./data";
 import { displayTag } from "./tags";
+import { filterByTag } from "./recherche";
 const recipeConteneur = document.querySelector('.conteneur-recettes');
 
 const recipeName = (recipe) =>{
@@ -35,7 +36,7 @@ const recipeIngredients = (recipe) => {
 
     for (const ingredient of recipe.ingredients) {
         const ingredients = document.createElement('h3');
-        let text = ingredient.ingredient + ingredient.quantity;
+        let text = ingredient.ingredient + ' : ' + ingredient.quantity + ' ';
         if(ingredient.unit){
             text += ingredient.unit;
         }
@@ -93,7 +94,7 @@ const recette = (recipe) => {
     recipeConteneur.append(divRecette);
 }
 
-const displayRecipes = (recipesData) =>{
+export const displayRecipes = (recipesData) =>{
     const recipesToDisplay = recipesData || recipes;
     recipeConteneur.innerText = '';
 
@@ -101,7 +102,8 @@ const displayRecipes = (recipesData) =>{
         recette(recipe)
     }
 
-    displayTag(recipes);
+    displayTag(recipesToDisplay);
+//    filterByTag(recipes);
 }
 
 (function init(){

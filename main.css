@@ -195,11 +195,11 @@ p {
   display: none;
   background-color: #3282F7;
   min-width: 175px;
-  max-width: 184px;
-  width: 300px;
+  width: 800px;
 }
 
 #block-page .btn-group .dropdown .dropdown-child a {
+  width: 225px;
   color: white;
   padding: 20px;
   text-decoration: none;
@@ -217,7 +217,14 @@ p {
 }
 
 #block-page .btn-group .dropdown:hover .dropdown-child {
-  display: block;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  border-radius: 5px;
+  padding-top: 10px;
+  padding-bottom: 10px;
 }
 
 #block-page .conteneur-recettes {
@@ -234,7 +241,7 @@ p {
 
 #block-page .conteneur-recettes .recette {
   width: 31%;
-  height: 400px;
+  height: 450px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -252,6 +259,7 @@ p {
 }
 
 #block-page .conteneur-recettes .recette .description-recette {
+  height: 212px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -266,7 +274,14 @@ p {
 }
 
 #block-page .conteneur-recettes .recette .description-recette .nom {
+  max-width: 230px;
   padding-left: 15px;
+}
+
+#block-page .conteneur-recettes .recette .description-recette .nom h2 {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 #block-page .conteneur-recettes .recette .description-recette .temps {
@@ -288,15 +303,33 @@ p {
 }
 
 #block-page .conteneur-recettes .recette .description-recette .ingredients {
-  width: 42%;
-  line-height: 5px;
+  width: 50%;
+  line-height: 15px;
   padding-top: 10px;
   padding-left: 15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+#block-page .conteneur-recettes .recette .description-recette .ingredients h3 {
+  margin-top: 10px;
+  margin-bottom: 0;
 }
 
 #block-page .conteneur-recettes .recette .description-recette .preparation {
-  width: 50%;
+  width: 40%;
   padding-right: 15px;
+}
+
+#block-page .conteneur-recettes .recette .description-recette .preparation p {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-height: 165px;
 }
 
 @media all and (max-width: 375px) {
@@ -425,6 +458,9 @@ p {
     height: 400px;
     min-width: 280px;
   }
+  .page #block-page .conteneur-recettes .recette .description-recette .nom {
+    max-width: 150px;
+  }
   .page #block-page .conteneur-recettes .recette .description-recette .ingredients {
     width: 47%;
   }
@@ -442,8 +478,11 @@ p {
   }
   .page #block-page .conteneur-recettes .recette {
     width: 49%;
-    height: 400px;
+    height: 450px;
     min-width: 280px;
+  }
+  .page #block-page .conteneur-recettes .recette .description-recette .nom {
+    max-width: 150px;
   }
   .page #block-page .conteneur-recettes .recette .description-recette .ingredients {
     width: 47%;
@@ -462,8 +501,11 @@ p {
   }
   .page #block-page .conteneur-recettes .recette {
     width: 31%;
-    height: 500px;
+    height: 450px;
     min-width: 280px;
+  }
+  .page #block-page .conteneur-recettes .recette .description-recette .nom {
+    max-width: 150px;
   }
   .page #block-page .conteneur-recettes .recette .description-recette .ingredients {
     width: 50%;
@@ -485,11 +527,14 @@ p {
     height: 500px;
     min-width: 280px;
   }
+  #block-page .conteneur-recettes .recette .description-recette .nom {
+    max-width: 150px;
+  }
   #block-page .conteneur-recettes .recette .description-recette .ingredients {
-    width: 45%;
+    width: 50%;
   }
   #block-page .conteneur-recettes .recette .description-recette .preparation {
-    width: 40%;
+    width: 38%;
   }
 }
 /*# sourceMappingURL=main.css.map */

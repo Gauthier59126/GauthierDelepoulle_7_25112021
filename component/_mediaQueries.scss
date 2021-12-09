@@ -133,6 +133,10 @@
                     min-width: 280px;
 
                     .description-recette{
+
+                        .nom{
+                            max-width: 150px;
+                        }
         
                         .ingredients{
                             width: 47%;
@@ -163,10 +167,14 @@
  
                 .recette{
                     width: 49%;
-                    height: 400px;
+                    height: 450px;
                     min-width: 280px;
 
                     .description-recette{
+
+                        .nom{
+                            max-width: 150px;
+                        }
         
                         .ingredients{
                             width: 47%;
@@ -197,10 +205,14 @@
   
                 .recette{
                     width: 31%;
-                    height: 500px;
+                    height: 450px;
                     min-width: 280px;
 
                     .description-recette{
+
+                        .nom{
+                            max-width: 150px;
+                        }
         
                         .ingredients{
                             width: 50%;
@@ -233,13 +245,17 @@
                 min-width: 280px;
     
                 .description-recette{
+
+                    .nom{
+                        max-width: 150px;
+                    }
     
                     .ingredients{
-                        width: 45%;
+                        width: 50%;
                     }
     
                     .preparation{
-                        width: 40%;
+                        width: 38%;
                     }
                 }
             }
