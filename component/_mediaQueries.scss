@@ -97,15 +97,21 @@
         
                 .recette{
                     width: 100%;
-                    height: 350px;
+                    height: 370px;
                     min-width: 0px;
-                    margin-bottom: 20px;       
+                    margin-bottom: 20px;      
+                    margin-right: 0px;
+                    margin-left: 0px; 
         
                     .description-recette{
-                        padding-bottom: 20px;
+                        padding-bottom: 10px;
+
+                        .nom{
+                            max-width: 50%;
+                        }
         
                         .preparation{
-                            width: 45%;
+                            width: 41%;
                         }
                     }
                 }
@@ -123,14 +129,33 @@
             .btn-group{
                 width: 70%;
                 justify-content: space-between;
+
+                .block-ingredients, .block-appareil, .block-ustensiles{
+
+                    .dropdown{
+       
+                        .dropdown-child{
+                            width: 189px;
+                        }
+                    }
+
+                    .dropdown:hover{
+
+                        .boutonmenuprincipal{
+                            width: 22%;
+                        }
+                    }
+                }  
             }
 
             .conteneur-recettes{
     
                 .recette{
-                    width: 49%;
-                    height: 400px;
+                    width: 47%;
+                    height: 450px;
                     min-width: 280px;
+                    margin-right: 10px;
+                    margin-left: 10px;
 
                     .description-recette{
 
@@ -140,10 +165,11 @@
         
                         .ingredients{
                             width: 47%;
+                            line-height: 12px;
                         }
         
                         .preparation{
-                            width: 44%;
+                            width: 42%;
                         }
                     }
                 }
@@ -161,6 +187,23 @@
             .btn-group{
                 width: 70%;
                 justify-content: space-between;
+
+                .block-ingredients, .block-appareil, .block-ustensiles{
+
+                    .dropdown{
+       
+                        .dropdown-child{
+                            width: 370px;
+                        }
+                    }
+
+                    .dropdown:hover{
+
+                        .boutonmenuprincipal{
+                            width: 49%;
+                        }
+                    }
+                }  
             }
 
             .conteneur-recettes{
@@ -169,11 +212,13 @@
                     width: 49%;
                     height: 450px;
                     min-width: 280px;
+                    margin-right: 3px;
+                    margin-left: 3px;
 
                     .description-recette{
 
                         .nom{
-                            max-width: 150px;
+                            max-width: 200px;
                         }
         
                         .ingredients{
@@ -197,8 +242,22 @@
         #block-page{
            
             .btn-group{
-                width: 55%;
+                width: 50%;
                 justify-content: space-between;
+
+                .block-ingredients, .block-appareil, .block-ustensiles{
+
+                    .dropdown{
+
+                        .boutonmenuprincipal{
+                            width: 68%;
+                        }
+        
+                        .dropdown-child{
+                            width: 498px;
+                        }
+                    }
+                }                    
             }
 
             .conteneur-recettes{
@@ -206,7 +265,9 @@
                 .recette{
                     width: 31%;
                     height: 450px;
-                    min-width: 280px;
+                    min-width: 270px;
+                    margin-right: 10px;
+                    margin-left: 10px;
 
                     .description-recette{
 
@@ -241,8 +302,10 @@
   
             .recette{
                 width: 31%;
-                height: 500px;
+                height: 450px;
                 min-width: 280px;
+                margin-right: 10px;
+                margin-left: 10px;
     
                 .description-recette{
 

@@ -18,55 +18,71 @@
                 <input type="text" name="Rechercher" id="searchBar" placeholder="Rechercher un ingrédient, appareil, ustensiles ou une recette">
                 <button class="search-btn"><i class="fas fa-search"></i></button>
             </form>
+            <div class="block-tags"><!--
+                <div class="div-tag t-ingredients">
+                    <h2>Nom tag</h2>
+                    <div class="close-bnt"><i class="far fa-times-circle"></i></div>
+                </div>
+                <div class="div-tag t-appareil">
+                    <h2>Nom tag</h2>
+                    <div class="close-bnt"><i class="far fa-times-circle"></i></div>
+                </div>
+                <div class="div-tag t-ustensiles">
+                    <h2>Nom tag</h2>
+                    <div class="close-bnt"><i class="far fa-times-circle"></i></div>
+                </div>-->
+            </div>
             <div class="btn-group">
                 <div class="block-ingredients">
-                    <div class="dropdown">
-                        <form><input class="boutonmenuprincipal ingredients" name="ingredients" placeholder="Ingrédients"></form>
+                    <div class="dropdown dropdown-ingredients">
+                        <form><input class="boutonmenuprincipal  ingredients" id="dropdown-search-bar" name="ingredients" placeholder="Ingrédients"></form>
                         <div class="dropdown-child dropdown-child-ingredients">
-                            <a href="">Lait de coco</a>
-                            <a href="">Sucre</a>
-                            <a href="">Concombre</a>
-                            <a href="">Citron vert</a>
-                            <a href="">Oignon</a>
-                            <a href="">Lait de coco</a>
-                            <a href="">Sucre</a>
-                            <a href="">Concombre</a>
-                            <a href="">Citron vert</a>
-                            <a href="">Oignon</a>
+                            <a class="dropdown-elements" href="">Lait de coco</a>
+                            <a class="dropdown-elements" href="">Sucre</a>
+                            <a class="dropdown-elements" href="">Concombre</a>
+                            <a class="dropdown-elements" href="">Citron vert</a>
+                            <a class="dropdown-elements" href="">Oignon</a>
+                            <a class="dropdown-elements" href="">Lait de coco</a>
+                            <a class="dropdown-elements" href="">Sucre</a>
+                            <a class="dropdown-elements" href="">Concombre</a>
+                            <a class="dropdown-elements" href="">Citron vert</a>
+                            <a class="dropdown-elements" href="">Oignon</a>
                         </div>
                     </div>
                 </div>
                 <div class="block-appareil">
-                    <div class="dropdown">
-                        <form><input class="boutonmenuprincipal appareil" name="appareil" placeholder="Appareil"></form>
+                    <div class="dropdown dropdown-appareil">
+                        <form><input class="boutonmenuprincipal appareil" id="dropdown-search-bar" name="appareil" placeholder="Appareil"></form>
                         <div class="dropdown-child dropdown-child-appareil">
-                            <a href="">Lait de coco</a>
-                            <a href="">Sucre</a>
-                            <a href="">Concombre</a>
-                            <a href="">Citron vert</a>
-                            <a href="">Oignon</a>
-                            <a href="">Lait de coco</a>
-                            <a href="">Sucre</a>
-                            <a href="">Concombre</a>
-                            <a href="">Citron vert</a>
-                            <a href="">Oignon</a>
+                            <a class="dropdown-elements" href="">Lait de coco</a>
+                            <a class="dropdown-elements" href="">Sucre</a>
+                            <a class="dropdown-elements" href="">Concombre</a>
+                            <a class="dropdown-elements" href="">Citron vert</a>
+                            <a class="dropdown-elements" href="">Oignon</a>
+                            <a class="dropdown-elements" href="">Lait de coco</a>
+                            <a class="dropdown-elements" href="">Sucre</a>
+                            <a class="dropdown-elements" href="">Concombre</a>
+                            <a class="dropdown-elements" href="">Citron vert</a>
+                            <a class="dropdown-elements" href="">Oignon</a>
                         </div>
                     </div>
                 </div>
                 <div class="block-ustensiles">
-                    <div class="dropdown">
-                        <form><input class="boutonmenuprincipal ustensiles" name="ustensiles" placeholder="Ustensiles"></form>
+                    <div class="dropdown dropdown-ustensiles">
+                        <form><input class="boutonmenuprincipal ustensiles" id="dropdown-search-bar" name="ustensiles" placeholder="Ustensiles"></form>
                         <div class="dropdown-child dropdown-child-ustensiles">
-                            <a href="">Lait de coco</a>
-                            <a href="">Sucre</a>
-                            <a href="">Concombre</a>
-                            <a href="">Citron vert</a>
-                            <a href="">Oignon</a>
-                            <a href="">Lait de coco</a>
-                            <a href="">Sucre</a>
-                            <a href="">Concombre</a>
-                            <a href="">Citron vert</a>
-                            <a href="">Oignon</a>
+                            <div class="div-links">
+                                <a class="dropdown-elements" href="">Lait de coco</a>
+                                <a class="dropdown-elements" href="">Sucre</a>
+                                <a class="dropdown-elements" href="">Concombre</a>
+                                <a class="dropdown-elements" href="">Citron vert</a>
+                                <a class="dropdown-elements" href="">Oignon</a>
+                                <a class="dropdown-elements" href="">Lait de coco</a>
+                                <a class="dropdown-elements" href="">Sucre</a>
+                                <a class="dropdown-elements" href="">Concombre</a>
+                                <a class="dropdown-elements" href="">Citron vert</a>
+                                <a class="dropdown-elements" href="">Oignon</a>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -196,6 +212,5 @@
         </div>
         <script src="bundle.js"></script>
         <script src="public/recette.bundle.js"></script>
-        <script src="js\recette.js"></script>
     </body>
 </html>

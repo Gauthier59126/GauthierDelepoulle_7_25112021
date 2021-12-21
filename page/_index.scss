@@ -70,10 +70,57 @@ p{
         }
     }
 
+    .block-tags{
+        width: 100%;
+        height: 40px;
+        display: flex;
+        justify-content: flex-start;
+        font-family: 'lato';
+        margin-top: 20px;
+
+        .div-tag{
+            max-width: 30%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-evenly;
+            border-radius: 5px;
+            margin-right: 15px;
+
+            h2{
+                margin: 0;
+                color: white;
+                font-size: 14px;
+                font-weight: 500;
+                padding-left: 10px;
+                padding-right: 10px;
+            }
+
+            i{
+                color: white;
+                font-weight: 300;
+                font-size: 18px;
+                cursor: pointer;
+                padding-right: 10px;
+            }
+        }
+
+        .t-ustensiles{
+            background-color: $rouge;
+        }
+        .t-ingredients{
+            background-color: #3282F7;
+        }
+
+        .t-appareil{
+            background-color: #68D9A4;
+        }
+    }
+
     .btn-group{
         width: 100%;
         height: 70px;
-        margin-top: 30px;
+        margin-top: 15px;
         margin-bottom: 30px;
         display: flex;
         justify-content: flex-start;
@@ -83,6 +130,15 @@ p{
             width: 14%;
             height: 100%;
             margin-right: 30px;
+            transition: all 0.5s;
+        }
+
+        .block-appareil{
+            z-index: 200;
+        }
+
+        .block-ingredients{
+            z-index: 300;
         }
 
         .dropdown{
@@ -144,12 +200,15 @@ p{
                 }
             }
 
+            .dropdown-child:hover, .boutonmenuprincipal{
+                border-radius: 5px 5px 5px 5px;
+            }
+
             .dropdown-child {
                 display: none;
                 background-color: #3282F7;
                 min-width: 175px;
-             //   max-width: 184px;
-                width: 540px;
+                width: 565px;
 
                 a{
                     width: 160px;
@@ -161,6 +220,7 @@ p{
                     display: block;
                     font-family: 'lato';
                     line-height: 0px;
+                    cursor: pointer;
                 }
             }
 
@@ -171,21 +231,35 @@ p{
             .dropdown-child-ustensiles{
                 background-color: $rouge;
             }
+
+
         }
 
         .dropdown:hover .dropdown-child {
             display: flex;
             flex-wrap: wrap;
-            border-radius: 5px;
+            border-radius: 0px 0px 5px 5px;
             padding-top: 10px;
             padding-bottom: 10px;
+            max-height: 300px;
+            overflow-y: scroll;
+            scrollbar-width: thin;
+        }
+
+        .dropdown:hover .dropdown-child-appareil{
+            overflow-y: hidden;
+        }
+
+        .dropdown:hover form{
+            width: 673px;
         }
     }
 
     .conteneur-recettes{
         display: flex;
         flex-wrap: wrap;
-        justify-content: space-between;
+  //      justify-content: space-between;
+
         font-family: 'lato';
 
         .recette{
@@ -193,8 +267,9 @@ p{
             height: 450px;
             display: flex;
             flex-direction: column;
-            min-width: 375px;
-
+            min-width: 355px;
+            margin-right: 13px;
+            margin-left: 13px;
 
             .div-img{
                 height: 180px;

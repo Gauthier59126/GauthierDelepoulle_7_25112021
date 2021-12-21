@@ -90,10 +90,68 @@ p {
   font-size: 24px;
 }
 
+#block-page .block-tags {
+  width: 100%;
+  height: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  font-family: 'lato';
+  margin-top: 20px;
+}
+
+#block-page .block-tags .div-tag {
+  max-width: 30%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  border-radius: 5px;
+  margin-right: 15px;
+}
+
+#block-page .block-tags .div-tag h2 {
+  margin: 0;
+  color: white;
+  font-size: 14px;
+  font-weight: 500;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+#block-page .block-tags .div-tag i {
+  color: white;
+  font-weight: 300;
+  font-size: 18px;
+  cursor: pointer;
+  padding-right: 10px;
+}
+
+#block-page .block-tags .t-ustensiles {
+  background-color: #ED6454;
+}
+
+#block-page .block-tags .t-ingredients {
+  background-color: #3282F7;
+}
+
+#block-page .block-tags .t-appareil {
+  background-color: #68D9A4;
+}
+
 #block-page .btn-group {
   width: 100%;
   height: 70px;
-  margin-top: 30px;
+  margin-top: 15px;
   margin-bottom: 30px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -110,6 +168,16 @@ p {
   width: 14%;
   height: 100%;
   margin-right: 30px;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+#block-page .btn-group .block-appareil {
+  z-index: 200;
+}
+
+#block-page .btn-group .block-ingredients {
+  z-index: 300;
 }
 
 #block-page .btn-group .dropdown {
@@ -191,11 +259,15 @@ p {
   border-radius: 5px 5px 0px 0px;
 }
 
+#block-page .btn-group .dropdown .dropdown-child:hover, #block-page .btn-group .dropdown .boutonmenuprincipal {
+  border-radius: 5px 5px 5px 5px;
+}
+
 #block-page .btn-group .dropdown .dropdown-child {
   display: none;
   background-color: #3282F7;
   min-width: 175px;
-  width: 540px;
+  width: 565px;
 }
 
 #block-page .btn-group .dropdown .dropdown-child a {
@@ -208,6 +280,7 @@ p {
   display: block;
   font-family: 'lato';
   line-height: 0px;
+  cursor: pointer;
 }
 
 #block-page .btn-group .dropdown .dropdown-child-appareil {
@@ -224,9 +297,20 @@ p {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  border-radius: 5px;
+  border-radius: 0px 0px 5px 5px;
   padding-top: 10px;
   padding-bottom: 10px;
+  max-height: 300px;
+  overflow-y: scroll;
+  scrollbar-width: thin;
+}
+
+#block-page .btn-group .dropdown:hover .dropdown-child-appareil {
+  overflow-y: hidden;
+}
+
+#block-page .btn-group .dropdown:hover form {
+  width: 673px;
 }
 
 #block-page .conteneur-recettes {
@@ -235,9 +319,6 @@ p {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
   font-family: 'lato';
 }
 
@@ -251,7 +332,9 @@ p {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  min-width: 375px;
+  min-width: 355px;
+  margin-right: 13px;
+  margin-left: 13px;
 }
 
 #block-page .conteneur-recettes .recette .div-img {
@@ -433,15 +516,20 @@ p {
   }
   .page #block-page .conteneur-recettes .recette {
     width: 100%;
-    height: 350px;
+    height: 370px;
     min-width: 0px;
     margin-bottom: 20px;
+    margin-right: 0px;
+    margin-left: 0px;
   }
   .page #block-page .conteneur-recettes .recette .description-recette {
-    padding-bottom: 20px;
+    padding-bottom: 10px;
+  }
+  .page #block-page .conteneur-recettes .recette .description-recette .nom {
+    max-width: 50%;
   }
   .page #block-page .conteneur-recettes .recette .description-recette .preparation {
-    width: 45%;
+    width: 41%;
   }
 }
 
@@ -455,19 +543,28 @@ p {
         -ms-flex-pack: justify;
             justify-content: space-between;
   }
+  .page #block-page .btn-group .block-ingredients .dropdown .dropdown-child, .page #block-page .btn-group .block-appareil .dropdown .dropdown-child, .page #block-page .btn-group .block-ustensiles .dropdown .dropdown-child {
+    width: 189px;
+  }
+  .page #block-page .btn-group .block-ingredients .dropdown:hover .boutonmenuprincipal, .page #block-page .btn-group .block-appareil .dropdown:hover .boutonmenuprincipal, .page #block-page .btn-group .block-ustensiles .dropdown:hover .boutonmenuprincipal {
+    width: 22%;
+  }
   .page #block-page .conteneur-recettes .recette {
-    width: 49%;
-    height: 400px;
+    width: 47%;
+    height: 450px;
     min-width: 280px;
+    margin-right: 10px;
+    margin-left: 10px;
   }
   .page #block-page .conteneur-recettes .recette .description-recette .nom {
     max-width: 150px;
   }
   .page #block-page .conteneur-recettes .recette .description-recette .ingredients {
     width: 47%;
+    line-height: 12px;
   }
   .page #block-page .conteneur-recettes .recette .description-recette .preparation {
-    width: 44%;
+    width: 42%;
   }
 }
 
@@ -478,13 +575,21 @@ p {
         -ms-flex-pack: justify;
             justify-content: space-between;
   }
+  .page #block-page .btn-group .block-ingredients .dropdown .dropdown-child, .page #block-page .btn-group .block-appareil .dropdown .dropdown-child, .page #block-page .btn-group .block-ustensiles .dropdown .dropdown-child {
+    width: 370px;
+  }
+  .page #block-page .btn-group .block-ingredients .dropdown:hover .boutonmenuprincipal, .page #block-page .btn-group .block-appareil .dropdown:hover .boutonmenuprincipal, .page #block-page .btn-group .block-ustensiles .dropdown:hover .boutonmenuprincipal {
+    width: 49%;
+  }
   .page #block-page .conteneur-recettes .recette {
     width: 49%;
     height: 450px;
     min-width: 280px;
+    margin-right: 3px;
+    margin-left: 3px;
   }
   .page #block-page .conteneur-recettes .recette .description-recette .nom {
-    max-width: 150px;
+    max-width: 200px;
   }
   .page #block-page .conteneur-recettes .recette .description-recette .ingredients {
     width: 47%;
@@ -496,15 +601,23 @@ p {
 
 @media all and (min-width: 970px) and (max-width: 1149px) {
   .page #block-page .btn-group {
-    width: 55%;
+    width: 50%;
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
   }
+  .page #block-page .btn-group .block-ingredients .dropdown .boutonmenuprincipal, .page #block-page .btn-group .block-appareil .dropdown .boutonmenuprincipal, .page #block-page .btn-group .block-ustensiles .dropdown .boutonmenuprincipal {
+    width: 68%;
+  }
+  .page #block-page .btn-group .block-ingredients .dropdown .dropdown-child, .page #block-page .btn-group .block-appareil .dropdown .dropdown-child, .page #block-page .btn-group .block-ustensiles .dropdown .dropdown-child {
+    width: 498px;
+  }
   .page #block-page .conteneur-recettes .recette {
     width: 31%;
     height: 450px;
-    min-width: 280px;
+    min-width: 270px;
+    margin-right: 10px;
+    margin-left: 10px;
   }
   .page #block-page .conteneur-recettes .recette .description-recette .nom {
     max-width: 150px;
@@ -526,8 +639,10 @@ p {
   }
   #block-page .conteneur-recettes .recette {
     width: 31%;
-    height: 500px;
+    height: 450px;
     min-width: 280px;
+    margin-right: 10px;
+    margin-left: 10px;
   }
   #block-page .conteneur-recettes .recette .description-recette .nom {
     max-width: 150px;
