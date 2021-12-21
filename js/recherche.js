@@ -21,10 +21,6 @@ searchBar.addEventListener('input', (e) => {
     if (searchString.length >= 3) {
         searchByInput(searchString);
     }
-//        const filteredRecipes = recipes.filter( recipe => {
-//        recipe.appliance.includes(searchString) || recipe.name.includes(searchString);
-//    })
-//    console.log(filteredRecipes);
 })
 
 // recherche ene affichant le resultat
@@ -37,8 +33,14 @@ const searchByInput = (input) => {
 const processSearchByInput = (input) => {
     inputValue = input;
     const normalizeInput = normalize(input);
-    filterRecipes = recipes.filter(recipe => searchByName(normalizeInput, recipe) || searchByDescription(normalizeInput, recipe) 
-    || searchByIngredient(normalizeInput, recipe));
+
+    filterRecipes = [];
+    for (const recipe of recipes) {
+        if (searchByName(normalizeInput, recipe) || searchByDescription(normalizeInput, recipe) 
+        || searchByIngredient(normalizeInput, recipe)) {
+          filterRecipes.push(recipe);
+        }
+    }
 
     return filterRecipes;
 }
@@ -52,8 +54,16 @@ const searchByDescription = (input, recipe) => {
 }
 
 const searchByIngredient = (input, recipe) =>{
-    const ingredientNames = recipe.ingredients.map(ingredient => ingredient.ingredient);
-    return ingredientNames.some(name => normalize(name).includes(input));
+/*    const ingredientNames = recipe.ingredients.map(ingredient => ingredient.ingredient);
+    return ingredientNames.some(name => normalize(name).includes(input));*/
+    
+    let exist = false;
+    for (const ingredient of recipe.ingredients) {
+        if (normalize(ingredient.ingredient).includes(input)) {
+            exist = true;
+        }
+    }
+    return exist;
 }
 
 // pour les caractères spéciaux
