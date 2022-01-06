@@ -15,202 +15,41 @@
                 <div class="div-logo"><img class="logo" src="./images/logo.png" alt="Logo Les Petits Plats"></div>
             </header>
             <form class="form-principal">
-                <input type="text" name="Rechercher" id="searchBar" placeholder="Rechercher un ingrédient, appareil, ustensiles ou une recette">
+                <input type="text" name="Rechercher" id="searchBar" autocomplete="off" placeholder="Rechercher un ingrédient, appareil, ustensiles ou une recette">
                 <button class="search-btn"><i class="fas fa-search"></i></button>
             </form>
-            <div class="block-tags"><!--
-                <div class="div-tag t-ingredients">
-                    <h2>Nom tag</h2>
-                    <div class="close-bnt"><i class="far fa-times-circle"></i></div>
-                </div>
-                <div class="div-tag t-appareil">
-                    <h2>Nom tag</h2>
-                    <div class="close-bnt"><i class="far fa-times-circle"></i></div>
-                </div>
-                <div class="div-tag t-ustensiles">
-                    <h2>Nom tag</h2>
-                    <div class="close-bnt"><i class="far fa-times-circle"></i></div>
-                </div>-->
+            <div class="block-tags">
             </div>
             <div class="btn-group">
                 <div class="block-ingredients">
                     <div class="dropdown dropdown-ingredients">
-                        <form><input class="boutonmenuprincipal  ingredients" id="dropdown-search-bar" name="ingredients" placeholder="Ingrédients"></form>
+                        <form><input class="boutonmenuprincipal  ingredients" id="ingredients-input" name="ingredients" autocomplete="off" placeholder="Ingrédients"></form>
                         <div class="dropdown-child dropdown-child-ingredients">
-                            <a class="dropdown-elements" href="">Lait de coco</a>
-                            <a class="dropdown-elements" href="">Sucre</a>
-                            <a class="dropdown-elements" href="">Concombre</a>
-                            <a class="dropdown-elements" href="">Citron vert</a>
-                            <a class="dropdown-elements" href="">Oignon</a>
-                            <a class="dropdown-elements" href="">Lait de coco</a>
-                            <a class="dropdown-elements" href="">Sucre</a>
-                            <a class="dropdown-elements" href="">Concombre</a>
-                            <a class="dropdown-elements" href="">Citron vert</a>
-                            <a class="dropdown-elements" href="">Oignon</a>
                         </div>
                     </div>
                 </div>
                 <div class="block-appareil">
                     <div class="dropdown dropdown-appareil">
-                        <form><input class="boutonmenuprincipal appareil" id="dropdown-search-bar" name="appareil" placeholder="Appareil"></form>
+                        <form><input class="boutonmenuprincipal appareil" id="appareils-input" name="appareil" autocomplete="off" placeholder="Appareil"></form>
                         <div class="dropdown-child dropdown-child-appareil">
-                            <a class="dropdown-elements" href="">Lait de coco</a>
-                            <a class="dropdown-elements" href="">Sucre</a>
-                            <a class="dropdown-elements" href="">Concombre</a>
-                            <a class="dropdown-elements" href="">Citron vert</a>
-                            <a class="dropdown-elements" href="">Oignon</a>
-                            <a class="dropdown-elements" href="">Lait de coco</a>
-                            <a class="dropdown-elements" href="">Sucre</a>
-                            <a class="dropdown-elements" href="">Concombre</a>
-                            <a class="dropdown-elements" href="">Citron vert</a>
-                            <a class="dropdown-elements" href="">Oignon</a>
                         </div>
                     </div>
                 </div>
                 <div class="block-ustensiles">
                     <div class="dropdown dropdown-ustensiles">
-                        <form><input class="boutonmenuprincipal ustensiles" id="dropdown-search-bar" name="ustensiles" placeholder="Ustensiles"></form>
+                        <form><input class="boutonmenuprincipal ustensiles" id="ustensiles-input" name="ustensiles" autocomplete="off" placeholder="Ustensiles"></form>
                         <div class="dropdown-child dropdown-child-ustensiles">
                             <div class="div-links">
-                                <a class="dropdown-elements" href="">Lait de coco</a>
-                                <a class="dropdown-elements" href="">Sucre</a>
-                                <a class="dropdown-elements" href="">Concombre</a>
-                                <a class="dropdown-elements" href="">Citron vert</a>
-                                <a class="dropdown-elements" href="">Oignon</a>
-                                <a class="dropdown-elements" href="">Lait de coco</a>
-                                <a class="dropdown-elements" href="">Sucre</a>
-                                <a class="dropdown-elements" href="">Concombre</a>
-                                <a class="dropdown-elements" href="">Citron vert</a>
-                                <a class="dropdown-elements" href="">Oignon</a>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
             <div class="conteneur-recettes">
-             <!--<div class="recette">
-                    <div class="div-img"></div>
-                    <div class="description-recette">
-                        <div class="nom"><h2>Limonade de Coco</h2></div>
-                        <div class="temps">
-                            <i class="far fa-clock"></i>
-                            <h2>10 min</h2>
-                        </div>
-                        <div class="ingredients">
-                            <h3>Lait de coco : 400ml</h3>
-                            <h3>Jus de citron : 2</h3>
-                            <h3>Crème de coco : 4 cuillères</h3>
-                            <h3>Sucre : 20g</h3>
-                            <h3>Glaçons : 2</h3>
-                        </div>
-                        <div class="preparation">
-                            <p>Mettre les glaçons à votre goût dans le blender, ajouter le lait, la crème de coco, le jus de 2 citrons et le sucre. Mixer jusqu'à avoir la consistance désirée</p>
-                        </div>
-                    </div>                   
-                </div>
-                <div class="recette">
-                    <div class="div-img"></div>
-                    <div class="description-recette">
-                        <div class="nom"><h2>Limonade de Coco</h2></div>
-                        <div class="temps">
-                            <i class="far fa-clock"></i>
-                            <h2>10 min</h2>
-                        </div>
-                        <div class="ingredients">
-                            <h3>Lait de coco : 400ml</h3>
-                            <h3>Jus de citron : 2</h3>
-                            <h3>Crème de coco : 4 cuillères</h3>
-                            <h3>Sucre : 20g</h3>
-                            <h3>Glaçons : 2</h3>
-                        </div>
-                        <div class="preparation">
-                            <p>Mettre les glaçons à votre goût dans le blender, ajouter le lait, la crème de coco, le jus de 2 citrons et le sucre. Mixer jusqu'à avoir la consistance désirée</p>
-                        </div>
-                    </div>                   
-                </div>
-                <div class="recette">
-                    <div class="div-img"></div>
-                    <div class="description-recette">
-                        <div class="nom"><h2>Limonade de Coco</h2></div>
-                        <div class="temps">
-                            <i class="far fa-clock"></i>
-                            <h2>10 min</h2>
-                        </div>
-                        <div class="ingredients">
-                            <h3>Lait de coco : 400ml</h3>
-                            <h3>Jus de citron : 2</h3>
-                            <h3>Crème de coco : 4 cuillères</h3>
-                            <h3>Sucre : 20g</h3>
-                            <h3>Glaçons : 2</h3>
-                        </div>
-                        <div class="preparation">
-                            <p>Mettre les glaçons à votre goût dans le blender, ajouter le lait, la crème de coco, le jus de 2 citrons et le sucre. Mixer jusqu'à avoir la consistance désirée</p>
-                        </div>
-                    </div>                   
-                </div>
-                <div class="recette">
-                    <div class="div-img"></div>
-                    <div class="description-recette">
-                        <div class="nom"><h2>Limonade de Coco</h2></div>
-                        <div class="temps">
-                            <i class="far fa-clock"></i>
-                            <h2>10 min</h2>
-                        </div>
-                        <div class="ingredients">
-                            <h3>Lait de coco : 400ml</h3>
-                            <h3>Jus de citron : 2</h3>
-                            <h3>Crème de coco : 4 cuillères</h3>
-                            <h3>Sucre : 20g</h3>
-                            <h3>Glaçons : 2</h3>
-                        </div>
-                        <div class="preparation">
-                            <p>Mettre les glaçons à votre goût dans le blender, ajouter le lait, la crème de coco, le jus de 2 citrons et le sucre. Mixer jusqu'à avoir la consistance désirée</p>
-                        </div>
-                    </div>                   
-                </div>
-                <div class="recette">
-                    <div class="div-img"></div>
-                    <div class="description-recette">
-                        <div class="nom"><h2>Limonade de Coco</h2></div>
-                        <div class="temps">
-                            <i class="far fa-clock"></i>
-                            <h2>10 min</h2>
-                        </div>
-                        <div class="ingredients">
-                            <h3>Lait de coco : 400ml</h3>
-                            <h3>Jus de citron : 2</h3>
-                            <h3>Crème de coco : 4 cuillères</h3>
-                            <h3>Sucre : 20g</h3>
-                            <h3>Glaçons : 2</h3>
-                        </div>
-                        <div class="preparation">
-                            <p>Mettre les glaçons à votre goût dans le blender, ajouter le lait, la crème de coco, le jus de 2 citrons et le sucre. Mixer jusqu'à avoir la consistance désirée</p>
-                        </div>
-                    </div>                   
-                </div>
-                <div class="recette">
-                    <div class="div-img"></div>
-                    <div class="description-recette">
-                        <div class="nom"><h2>Limonade de Coco</h2></div>
-                        <div class="temps">
-                            <i class="far fa-clock"></i>
-                            <h2>10 min</h2>
-                        </div>
-                        <div class="ingredients">
-                            <h3>Lait de coco : 400ml</h3>
-                            <h3>Jus de citron : 2</h3>
-                            <h3>Crème de coco : 4 cuillères</h3>
-                            <h3>Sucre : 20g</h3>
-                            <h3>Glaçons : 2</h3>
-                        </div>
-                        <div class="preparation">
-                            <p>Mettre les glaçons à votre goût dans le blender, ajouter le lait, la crème de coco, le jus de 2 citrons et le sucre. Mixer jusqu'à avoir la consistance désirée</p>
-                        </div>
-                    </div>                   
-                </div>-->   
             </div>
         </div>
-        <script src="bundle.js"></script>
+      <!--  <script src="bundle.js"></script>-->
         <script src="public/recette.bundle.js"></script>
+        <script src="public/recherche.bundle.js"></script>
     </body>
 </html>

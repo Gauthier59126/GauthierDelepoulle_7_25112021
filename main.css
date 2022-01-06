@@ -168,8 +168,6 @@ p {
   width: 14%;
   height: 100%;
   margin-right: 30px;
-  -webkit-transition: all 0.5s;
-  transition: all 0.5s;
 }
 
 #block-page .btn-group .block-appareil {
@@ -576,10 +574,10 @@ p {
             justify-content: space-between;
   }
   .page #block-page .btn-group .block-ingredients .dropdown .dropdown-child, .page #block-page .btn-group .block-appareil .dropdown .dropdown-child, .page #block-page .btn-group .block-ustensiles .dropdown .dropdown-child {
-    width: 370px;
+    width: 320px;
   }
   .page #block-page .btn-group .block-ingredients .dropdown:hover .boutonmenuprincipal, .page #block-page .btn-group .block-appareil .dropdown:hover .boutonmenuprincipal, .page #block-page .btn-group .block-ustensiles .dropdown:hover .boutonmenuprincipal {
-    width: 49%;
+    width: 42%;
   }
   .page #block-page .conteneur-recettes .recette {
     width: 49%;

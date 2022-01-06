@@ -1,112 +1,119 @@
-import { recipes } from "./data";
-import { displayTag } from "./tags";
-import { filterByTag } from "./recherche";
+import { recipes } from './data';
+// eslint-disable-next-line import/no-cycle
+import displayTag from './tags';
+
+let searchByTag = null;
+let removeTag = null;
+
 const recipeConteneur = document.querySelector('.conteneur-recettes');
 
-const recipeName = (recipe) =>{
-    const divNom = document.createElement('div');
-    divNom.className = 'nom';
+const recipeName = (recipe) => {
+  const divNom = document.createElement('div');
+  divNom.className = 'nom';
 
-    const nom = document.createElement('h2');
-    nom.innerText = recipe.name
+  const nom = document.createElement('h2');
+  nom.innerText = recipe.name;
 
-    divNom.appendChild(nom);
+  divNom.appendChild(nom);
 
-    return divNom;
-}
+  return divNom;
+};
 
 const recipeTime = (recipe) => {
-    const divTemps = document.createElement('div');
-    divTemps.className = 'temps';
+  const divTemps = document.createElement('div');
+  divTemps.className = 'temps';
 
-    const icone = document.createElement('i');
-    icone.className = 'far fa-clock'
+  const icone = document.createElement('i');
+  icone.className = 'far fa-clock';
 
-    const temps = document.createElement('h2');
-    temps.innerText = recipe.time + "min";
+  const temps = document.createElement('h2');
+  temps.innerText = `${recipe.time}min`;
 
-    divTemps.append(icone, temps);
+  divTemps.append(icone, temps);
 
-    return divTemps;
-}
+  return divTemps;
+};
 
 const recipeIngredients = (recipe) => {
-    const divIngredients = document.createElement('div');
-    divIngredients.className = 'ingredients';
+  const divIngredients = document.createElement('div');
+  divIngredients.className = 'ingredients';
 
-    for (const ingredient of recipe.ingredients) {
-        const ingredients = document.createElement('h3');
-        let text = ingredient.ingredient + ' : ' + ingredient.quantity + ' ';
-        if(ingredient.unit){
-            text += ingredient.unit;
-        }
-
-        ingredients.innerText = text;
-        divIngredients.appendChild(ingredients);
+  // eslint-disable-next-line no-restricted-syntax
+  for (const ingredient of recipe.ingredients) {
+    const ingredients = document.createElement('h3');
+    let text = `${ingredient.ingredient} : ${ingredient.quantity} `;
+    if (ingredient.unit) {
+      text += ingredient.unit;
     }
 
-    return divIngredients;
-}
+    ingredients.innerText = text;
+    divIngredients.appendChild(ingredients);
+  }
+
+  return divIngredients;
+};
 
 const recipeMaking = (recipe) => {
-    const divPreparation = document.createElement('div');
-    divPreparation.className = 'preparation';
+  const divPreparation = document.createElement('div');
+  divPreparation.className = 'preparation';
 
-    const textPreparation = document.createElement('p');
-    textPreparation.innerText = recipe.description;
+  const textPreparation = document.createElement('p');
+  textPreparation.innerText = recipe.description;
 
-    divPreparation.appendChild(textPreparation);
+  divPreparation.appendChild(textPreparation);
 
-    return divPreparation;
-}
+  return divPreparation;
+};
 
 const recipeDescription = (recipe) => {
-    const divDescription = document.createElement('div');
-    divDescription.className = 'description-recette';
+  const divDescription = document.createElement('div');
+  divDescription.className = 'description-recette';
 
-    const divNom = recipeName(recipe)
-    const divTemps = recipeTime(recipe);
-    const divIngredients = recipeIngredients(recipe);
-    const divPreparation = recipeMaking(recipe);
+  const divNom = recipeName(recipe);
+  const divTemps = recipeTime(recipe);
+  const divIngredients = recipeIngredients(recipe);
+  const divPreparation = recipeMaking(recipe);
 
-    divDescription.append(divNom, divTemps, divIngredients, divPreparation);
+  divDescription.append(divNom, divTemps, divIngredients, divPreparation);
 
-    return divDescription;
-}
+  return divDescription;
+};
 
 const recipeImage = () => {
-    const divImage = document.createElement('div');
-    divImage.className = 'div-img';
-    divImage.src = "";
+  const divImage = document.createElement('div');
+  divImage.className = 'div-img';
+  divImage.src = '';
 
-    return divImage;
-}
+  return divImage;
+};
 
 const recette = (recipe) => {
-    const divRecette = document.createElement('div');
-    divRecette.className = 'recette';
+  const divRecette = document.createElement('div');
+  divRecette.className = 'recette';
 
-    const divImage = recipeImage();
-    const divDescription = recipeDescription(recipe);
+  const divImage = recipeImage();
+  const divDescription = recipeDescription(recipe);
 
-    divRecette.append(divImage, divDescription);
+  divRecette.append(divImage, divDescription);
 
-    recipeConteneur.append(divRecette);
-}
+  recipeConteneur.append(divRecette);
+};
 
-export const displayRecipes = (recipesData) =>{
-    const recipesToDisplay = recipesData || recipes;
-    recipeConteneur.innerText = '';
+// eslint-disable-next-line import/prefer-default-export
+export const displayRecipes = (recipesData) => {
+  const recipesToDisplay = recipesData || recipes;
+  recipeConteneur.innerText = '';
 
-    for (const recipe of recipesToDisplay) {
-        recette(recipe)
-    }
+  // eslint-disable-next-line no-restricted-syntax
+  for (const recipe of recipesToDisplay) {
+    recette(recipe);
+  }
 
-    displayTag(recipesToDisplay);
-//    filterByTag(recipes);
-}
+  displayTag(recipesToDisplay, searchByTag, removeTag);
+};
 
-(function init(){
-    displayRecipes();
-})()
-
+export const init = (search, remove) => {
+  searchByTag = search;
+  removeTag = remove;
+  displayRecipes();
+};
